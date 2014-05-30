@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class HelloWorld
+{
+	//static String str ="string to print";
+	//static double pi=3.14;
+	//pi=3.21;
+	public static void main(String [] args )
+	{
+		//System.out.print(str);
+		//System.out.println(pi);
+		int t=(int) Math.random(()*45);
+		System.out.println(t);
+		Scanner keyboard=new Scanner(System.in);
+		String name=keyboard.nextLine();
+		System.out.println(name);
+		if(name.equals ("Nikhil")) System.out.println("Hello Nikhil");
+		else if(name.equals ("Tom")) System.out.println("Hello Tom");
+		else System.out.println("Sorry I don't know you");
+	}
+}

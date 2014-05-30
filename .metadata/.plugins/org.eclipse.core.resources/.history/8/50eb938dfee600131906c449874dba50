@@ -1,0 +1,32 @@
+package com.example.viewpager;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		ViewPagerAdapter adapter = new ViewPagerAdapter(this, imageArra);
+		ViewPager myPager = (ViewPager) findViewById(R.id.myfivepanelpager);
+		myPager.setAdapter(adapter);
+		myPager.setCurrentItem(0);
+	}
+	
+	private int imageArra[] = { R.drawable.antartica1, R.drawable.antartica2,
+			R.drawable.antartica3, R.drawable.antartica4,
+			R.drawable.antartica5, R.drawable.antartica6,
+			R.drawable.antartica7, R.drawable.antartica8 };
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

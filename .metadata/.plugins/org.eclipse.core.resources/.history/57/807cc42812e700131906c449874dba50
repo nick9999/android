@@ -1,0 +1,28 @@
+package com.example.imageloaderfromurl;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ImageView;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		int loader=R.drawable.ic_launcher;
+		ImageView image=(ImageView) findViewById(R.id.image);
+		String image_url="https://www.google.co.in/search?q=google+logo&newwindow=1&espv=2&tbm=isch&imgil=fCzYfS0k75Jn5M%253A%253Bhttps%253A%252F%252Fencrypted-tbn0.gstatic.com%252Fimages%253Fq%253Dtbn%253AANd9GcQLVd95qJQ54hzZCOVzYqXwpZBphVIVTrx7kx1DsiRw44SAQnJm%253B5906%253B2953%253B-LkCRR9gfNiYRM%253Bhttp%25253A%25252F%25252Fwww.hd-wallpapers-3d.com%25252Fgoogle-logo%25252Fgoogle-3%25252F&source=iu&usg=__H7fJRixh5KZhxZP4no-JbzXZTsY%3D&sa=X&ei=OfuGU5WVBtOUuASjxoCIDg&ved=0CC4Q9QEwAQ#facrc=_&imgdii=_&imgrc=fCzYfS0k75Jn5M%253A%3B-LkCRR9gfNiYRM%3Bhttp%253A%252F%252Fwww.hd-wallpapers-3d.com%252Fwp-content%252Fuploads%252F2014%252F05%252Fgoogle-3.jpg%3Bhttp%253A%252F%252Fwww.hd-wallpapers-3d.com%252Fgoogle-logo%252Fgoogle-3%252F%3B5906%3B2953";
+		ImageLoader imgLoader=new ImageLoader(getApplicationContext());
+		imgLoader.DisplayImage(image_url,loader,image);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

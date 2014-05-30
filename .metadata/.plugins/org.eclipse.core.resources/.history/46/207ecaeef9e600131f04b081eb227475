@@ -1,0 +1,21 @@
+package com.example.viewpager;
+
+import android.app.Activity;
+import android.support.v4.view.PagerAdapter;
+
+public class ViewPagerAdapter extends PagerAdapter {
+
+	Activity activity;
+	int[] imageArray;
+	
+	public ViewPagerAdapter(Activity activity,int [] imageArray )
+	{
+		imageArray=imageArray;
+		activity=activity;
+	}
+	
+	public int getCount()
+	{
+		
+	}
+}

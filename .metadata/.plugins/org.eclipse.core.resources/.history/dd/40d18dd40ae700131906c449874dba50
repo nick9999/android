@@ -1,0 +1,5 @@
+package com.example.imageloaderfromurl;
+
+public class ImageLoader {
+	MemoryCache memoryCache=new MemoryCache(); 
+}

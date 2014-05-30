@@ -1,0 +1,61 @@
+package com.example.dslapp;
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+		public final static String EXTRA_MESSAGE=" com.example.dslapp.MESSAGE";
+		public static final String MyPREFERENCES = "MyPrefs" ;
+		EditText etext;
+		public static final String Etext="etextkey";
+		String message;
+	    SharedPreferences sharedpreferences;
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+		String value=sharedpreferences.getString(Etext, null);
+		if(value==null)
+		{
+			setContentView(R.layout.activity_main);
+			etext = (EditText) findViewById(R.id.edit_message);
+			message = etext.getText().toString();
+		}
+		else
+		{
+			TextView textView = new TextView(this);
+		    textView.setTextSize(30);
+		    textView.setText(value);
+		    setContentView(textView);
+		}
+		
+		
+		
+	
+ 
+		
+	}
+
+	public void sendMessage(View view) {
+		String message = etext.getText().toString();
+		  Editor editor = sharedpreferences.edit();
+		  editor.putString(Etext, message);
+		  editor.commit();
+		  }
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
