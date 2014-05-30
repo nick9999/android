@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		int loader = R.drawable.ic_launcher;
+		/*int loader = R.drawable.ic_launcher;
 		ImageView image = (ImageView) findViewById(R.id.image);
 		String image_url1 = "http://api.androidhive.info/images/sample.jpg";
 		String image_url2 = "http://s3.amazonaws.com/thumbnails.illustrationsource.com/huge.86.433302.JPG";
@@ -23,17 +23,11 @@ public class MainActivity extends Activity {
 		
 		
 		//imgLoader.DisplayImage(image_url1, loader, image);
-		//imgLoader.DisplayImage(image_url2, loader, image);
+		//imgLoader.DisplayImage(image_url2, loader, image);*/
 
 	}
 	
-	public class CustomAdapter extends BaseAdapter
-	{
-		private Activity activity;
-		private ArrayList data;
-		private static LayoutInflater inflater=null;
-	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

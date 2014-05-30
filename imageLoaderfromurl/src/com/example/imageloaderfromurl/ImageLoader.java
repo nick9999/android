@@ -18,7 +18,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-
 import android.widget.ImageView;
 
 public class ImageLoader {
@@ -75,7 +74,7 @@ public class ImageLoader {
 
 			//k is the index for which view is called
 			
-			for (int i = 0; i < 75; i++) {
+			for (int i = 0; i < 20; i++) {
 				if (image_urls[i].equals(imageUrl))
 					k = i;
 			}
@@ -92,7 +91,7 @@ public class ImageLoader {
 			
 			//if it is scrolling down
 			
-			for (int i = 75; i > min(74, k + 5); i--) {
+			for (int i = 19; i > min(19, k + 5); i--) {
 				URL imageurl1 = new URL(image_urls[i]);
 				HttpURLConnection conn2 = (HttpURLConnection) imageurl1
 						.openConnection();
